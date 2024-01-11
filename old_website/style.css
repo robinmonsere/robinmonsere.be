@@ -1,0 +1,185 @@
+@media screen and (max-width: 750px) {
+    main {
+        max-width: 80% !important;
+        margin: auto !important ;
+    }
+
+    .carousel {
+        width: 100% !important;
+    }
+
+    h1 {
+        padding-left: 10% !important;
+        font-size: 1.5rem;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact div {
+        margin-bottom: 1rem;
+    }
+
+    #skills_coll {
+        flex-direction: column;
+    }
+
+    .skill {
+        margin-bottom: 1rem;
+    }
+}
+
+/*
+.typewriter h1 {
+    width: 17rem;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+     margin: 0 auto;
+    letter-spacing: .10em;
+    animation:
+            typing 1.5s steps(15, end),
+            blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 17rem }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #F7F7FF;
+}
+
+main {
+    margin: auto;
+    max-width: 50%;
+}
+
+h1 {
+    padding-left: 25%;
+    color: #333;
+}
+
+h2, h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+
+.appbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    width: 6rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+header {
+    width: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    position: sticky;
+    top: 0;
+    background: #BDD5EA;
+}
+
+#contact {
+    display: flex;
+}
+
+#contact div {
+    flex: 1;
+}
+
+#skills_coll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main > div, #projects li {
+    margin-bottom: 3rem;
+}
+
+#sgImages img {
+    max-height: 30rem;
+}
+
+.carousel {
+    position: relative;
+    width: 65%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+@media print {
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .body.menubar-top {
+        padding-top: 0;
+    }
+}
