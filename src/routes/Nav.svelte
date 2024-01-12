@@ -3,31 +3,50 @@
     import {page} from "$app/stores";
 </script>
 
-
-<header>
+<div>
+    <button>
+        <p>View my blog</p>
+    </button>
+    <nav>
+        <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skill">Skills</a></li>
+            <li><a href="/#projects">Projects</a></li>
+        </ul>
+    </nav>
+</div>
+    <!--
     <div class="corner">
         <a href="https://robinmonsere.be">
             <img src={logo} alt="R Logo" />
         </a>
     </div>
-    <nav>
-        <ul>
+    -->
 
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact</a></li>
-            <li aria-current={$page.url.pathname === '/blog' ? 'page' : undefined}><a href="/blog">blog</a></li>
-        </ul>
-    </nav>
-
-</header>
 
 <style>
-    header {
+
+    div {
+        margin-top: 1rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        margin: 2rem;
+    }
+
+    button {
+        margin-bottom: 2rem;
+        color: white;
+        background: none;
+        width: 10rem;
+        height: 2rem;
+        border: 1px white solid;
+        border-radius: 0.2rem;
+
+    }
+
+    button:hover {
+        background: white;
+        color: black;
     }
 
     .corner img {
@@ -38,21 +57,11 @@
     }
 
     ul {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        height: 3em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         list-style: none;
-
-        background-size: contain;
     }
 
     li {
-        position: relative;
-        height: 100%;
+        margin-bottom: 1rem;
     }
 
     li[aria-current='page']::before {
