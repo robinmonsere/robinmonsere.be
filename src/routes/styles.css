@@ -34,7 +34,10 @@ body {
 	background: var(--color-theme-1);
 }
 
-
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
 
 .visually-hidden {
