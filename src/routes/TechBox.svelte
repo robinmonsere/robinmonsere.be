@@ -9,7 +9,7 @@
 <style>
 
     p {
-        color: rgb(85, 210, 192);
+        color: var(--color-theme-1);
         display: inline-block;
         border-radius: 2rem;
         font-size: 0.8rem;
@@ -19,6 +19,6 @@
         display: inline-block;
         padding: 0.5rem;
         border-radius: 2rem;
-        background: rgb(18, 43, 57);
+        background: var(--color-theme-2);
     }
 </style>
