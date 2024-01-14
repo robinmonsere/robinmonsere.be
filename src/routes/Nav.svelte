@@ -1,18 +1,53 @@
 <script>
-    import logo from '$lib/images/R logo.png';
-    import {page} from "$app/stores";
+    import { page } from '$app/stores';
+    import { scrollTo } from 'svelte-scrolling'
+
+
+    const handleScroll = () => {
+        const skillsSection = document.getElementById('skills').offsetTop;
+        const projectsSection = document.getElementById('projects').offsetTop;
+
+
+
+        const navAbout = document.getElementById('nav-about');
+        const navSKills = document.getElementById('nav-skills');
+        const navProject = document.getElementById('nav-projects');
+
+        const scrollPosition = window.scrollY;
+
+        console.log(skillsSection)
+        console.log(scrollPosition)
+        if (scrollPosition < skillsSection - 10) {
+               console.log("aboutNAv")
+            navAbout.ariaCurrent = true;
+            navSKills.ariaCurrent = false;
+            navProject.ariaCurrent = false;
+        } else if (scrollPosition < projectsSection) {
+            console.log("skills")
+            navAbout.ariaCurrent = false;
+            navSKills.ariaCurrent = true;
+            navProject.ariaCurrent = false;
+        } else {
+            console.log("projects")
+            navAbout.ariaCurrent = false;
+            navSKills.ariaCurrent = false;
+            navProject.ariaCurrent = true;
+        }
+    };
+
 </script>
+
+<svelte:document on:scroll={handleScroll} />
+
 
 <div>
     <div class="button diagonal-tl-br-out">
-        <a href="">View my blog</a>
+        <a href="/blog">View my blog</a>
     </div>
     <nav>
-        <ul>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#skills">Skills</a></li>
-            <li><a href="/#projects">Projects</a></li>
-        </ul>
+        <a use:scrollTo={{ ref:'about', duration: 1000}} id="nav-about" aria-current={$page.url.hash === '#about' || $page.url.hash === ''} href="/#about"><span class="nav_indicator"></span><span>About</span></a>
+        <a use:scrollTo={{ ref: 'skills' , duration: 1000}} id="nav-skills" aria-current={$page.url.hash === '#skills'} href="/#skills"><span class="nav_indicator"></span><span>Skills</span></a>
+        <a use:scrollTo={{ ref: 'projects', duration: 1000 }} id="nav-projects" aria-current={$page.url.hash === '#projects'} href="/#projects"><span class="nav_indicator"></span><span>Projects</span></a>
     </nav>
 </div>
     <!--
@@ -43,19 +78,16 @@
         color: var(--color-bg-0);
         border: 2px var(--color-bg-0) solid;
     }
-
     .button:before, .button:after {
         transition: 0.5s ease;
         content: '';
         position: absolute;
         z-index: -1;
     }
-
     .button a {
         text-align: center;
         padding-top: 0.7rem;
     }
-
     .diagonal-tl-br-out {
         background: var(--color-theme-1);
     }
@@ -92,32 +124,61 @@
         margin-bottom: 1rem;
     }
 
-    li[aria-current='page']::before {
-        --size: 6px;
-        content: '';
-        width: 0;
-        height: 0;
-        position: absolute;
-        top: 0;
-        left: calc(50% - var(--size));
-        border: var(--size) solid transparent;
-        border-top: var(--size) solid var(--color-theme-1);
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
     }
 
     nav a {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        padding: 0 0.5rem;
-        color: var(--color-text);
+        color: var(--color-text-2);
         font-weight: 700;
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         transition: color 0.2s linear;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav_indicator {
+        margin-right: 0.3rem;
+        display: block;
+        width: 2rem;
+        height: 1px;
+        box-sizing: border-box;
+        border: 1px solid var(--color-text-2);
+        transition-duration: .2s;
+    }
+
+    nav a[aria-current=true] span {
+        color: var(--color-theme-1);
+    }
+
+    nav a[aria-current=true] .nav_indicator {
+        width: 4rem;
+        color: var(--color-theme-1);
+        border: 1px solid var(--color-theme-1);
+    }
+
+    .active span {
+        color: var(--color-theme-1);
+    }
+
+    .active .nav_indicator {
+        width: 4rem;
+        color: var(--color-theme-1);
+        border: 1px solid var(--color-theme-1);
     }
 
     nav a:hover {
         color: var(--color-theme-1);
+    }
+
+    nav a:hover .nav_indicator {
+        width: 4rem;
+        color: var(--color-theme-1);
+        border: 1px solid var(--color-theme-1);
     }
 </style>

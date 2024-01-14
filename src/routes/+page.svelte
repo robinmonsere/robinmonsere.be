@@ -5,6 +5,7 @@
     import fitBuddy from '$lib/images/fitbuddy.svg';
     import spaceGaze from '$lib/images/spacegaze.svg'
     import eportfolio from '$lib/images/R logo.png'
+    import {scrollRef } from 'svelte-scrolling'
 </script>
 
 
@@ -23,17 +24,16 @@
         </div>
     </div>
     <div class="column" id="second">
-        <div id="about">
+        <div id="about" use:scrollRef={'about'}>
             <p>I'm a 20-year-old <em>software engineering student</em> at Howest. I love building <em>automated systems</em> for the web and industries.
                 Next to my studies and software, my interest lay with spaceflight and I actively contribute to a youth movement.</p>
             <br><p>In 2023 I went on a international study to the USA, and in 2024 I am doing an internship in mobile app development.</p>
         </div>
-        <div id="skills">
-            <h3>My growing skillset includes</h3>
+        <div id="skills" use:scrollRef={'skills'}>
             <h3>Things I've worked with so far:</h3>
             <div>
-                <p>Web Development</p>
                 <div class="skills_section">
+                    <p>Web Development</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">HTML</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title>
@@ -75,8 +75,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Mobile Development</p>
                 <div class="skills_section">
+                    <p>Mobile Development</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">Kotlin</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin</title>
@@ -97,8 +97,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Databases</p>
                 <div class="skills_section">
+                    <p>Databases</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">Neo4J</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Neo4j</title>
@@ -124,8 +124,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Extra</p>
                 <div class="skills_section">
+                    <p>Extra</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">Git</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Git</title>
@@ -151,8 +151,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Operating Systems</p>
                 <div class="skills_section">
+                    <p>Operating Systems</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">Linux</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Linux</title>
@@ -167,8 +167,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Other</p>
                 <div class="skills_section">
+                    <p>Other</p>
                     <ul>
                         <li class="tooltip"><span class="tooltiptext">Java</span>
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div id="projects">
+        <div id="projects" use:scrollRef={'projects'}>
             <div class="project">
                 <div class="project_links">
                     <img src="{pilsopoly}" alt="pilsopoly logo">
@@ -204,7 +204,6 @@
                     <p>PilsoPoly, a game based on the popular Monopoly, is a functional, browser-playable Monopoly game with a special touch.</p><br>
                     <p>The client is built using standard HTML, CSS, and JavaScript, while the server is developed with Java (VertX) and utilizes a RESTful API.</p>
                     <br><p>PilsoPoly was designed and built by 4 students at Howest</p>
-
                     <div class="technologies">
                         <TechBox name="HTML5"/>
                         <TechBox name="CSS3"/>
@@ -273,7 +272,6 @@
         flex-direction: row;
         margin: 0 15vw 5rem 15vw;
         height: 100%;
-
     }
 
     #first {
@@ -379,9 +377,14 @@
     }
 
     #skills>div {
+      margin-top: 0.5rem;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.8rem;
+    }
+
+    .skills_section p {
+      margin-bottom: 0.3rem;
     }
 
     svg {
@@ -406,7 +409,7 @@
     }
 
     .project:hover {
-        background: #121d34;
+        background: var(--color-bg-1);
         box-shadow: 2px 3px #0a1b26;
     }
 
@@ -420,6 +423,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.5rem;
+    }
+
+    #resume h3 {
+      padding-left: 1rem;
     }
 
     #resume:hover {
