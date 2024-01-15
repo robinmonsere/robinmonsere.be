@@ -2,8 +2,10 @@ import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	strict: false,
 	kit: {
 		prerender: {
+			handleMissingId: 'ignore',
 			crawl: true,
 			entries: [
 				'/',

@@ -2,7 +2,6 @@
     import { page } from '$app/stores';
     import { scrollTo } from 'svelte-scrolling'
 
-
     const handleScroll = () => {
         const skillsSection = document.getElementById('skills').offsetTop;
         const projectsSection = document.getElementById('projects').offsetTop;
@@ -15,20 +14,15 @@
 
         const scrollPosition = window.scrollY;
 
-        console.log(skillsSection)
-        console.log(scrollPosition)
-        if (scrollPosition < skillsSection - 10) {
-               console.log("aboutNAv")
+        if (scrollPosition < skillsSection - 100) {
             navAbout.ariaCurrent = true;
             navSKills.ariaCurrent = false;
             navProject.ariaCurrent = false;
-        } else if (scrollPosition < projectsSection) {
-            console.log("skills")
+        } else if (scrollPosition < projectsSection - 100) {
             navAbout.ariaCurrent = false;
             navSKills.ariaCurrent = true;
             navProject.ariaCurrent = false;
         } else {
-            console.log("projects")
             navAbout.ariaCurrent = false;
             navSKills.ariaCurrent = false;
             navProject.ariaCurrent = true;
@@ -107,21 +101,12 @@
     .diagonal-tl-br-out:hover:before, .diagonal-tl-br-out:hover:after {
         width: 105%;
     }
-
-
+    
     div {
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    li {
-        margin-bottom: 1rem;
     }
 
     nav {
@@ -161,17 +146,7 @@
         color: var(--color-theme-1);
         border: 1px solid var(--color-theme-1);
     }
-
-    .active span {
-        color: var(--color-theme-1);
-    }
-
-    .active .nav_indicator {
-        width: 4rem;
-        color: var(--color-theme-1);
-        border: 1px solid var(--color-theme-1);
-    }
-
+    
     nav a:hover {
         color: var(--color-theme-1);
     }
@@ -180,5 +155,11 @@
         width: 4rem;
         color: var(--color-theme-1);
         border: 1px solid var(--color-theme-1);
+    }
+
+    @media screen and (max-width: 800px) {
+        nav {
+            display: none;
+        }
     }
 </style>

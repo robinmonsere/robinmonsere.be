@@ -6,6 +6,9 @@
     import spaceGaze from '$lib/images/spacegaze.svg'
     import eportfolio from '$lib/images/R logo.png'
     import {scrollRef } from 'svelte-scrolling'
+
+    import '$lib/reset.css'
+    import './styles.css';
 </script>
 
 
@@ -25,11 +28,13 @@
     </div>
     <div class="column" id="second">
         <div id="about" use:scrollRef={'about'}>
+            <p class="section_title">About</p>
             <p>I'm a 20-year-old <em>software engineering student</em> at Howest. I love building <em>automated systems</em> for the web and industries.
                 Next to my studies and software, my interest lay with spaceflight and I actively contribute to a youth movement.</p>
             <br><p>In 2023 I went on a international study to the USA, and in 2024 I am doing an internship in mobile app development.</p>
         </div>
         <div id="skills" use:scrollRef={'skills'}>
+            <p class="section_title">Skills</p>
             <h3>Things I've worked with so far:</h3>
             <div>
                 <div class="skills_section">
@@ -191,6 +196,7 @@
             </div>
         </div>
         <div id="projects" use:scrollRef={'projects'}>
+            <p class="section_title">Projects</p>
             <div class="project">
                 <div class="project_links">
                     <img src="{pilsopoly}" alt="pilsopoly logo">
@@ -267,6 +273,7 @@
 
 
 <style lang="scss">
+
     #main_page {
         display: flex;
         flex-direction: row;
@@ -311,6 +318,7 @@
     h2 {
         margin: 0.8rem 0 0.8rem 0;
         font-size: 2rem;
+
     }
 
     h3 {
@@ -426,6 +434,7 @@
     }
 
     #resume h3 {
+      margin-top: 2rem;
       padding-left: 1rem;
     }
 
@@ -436,7 +445,6 @@
     .tooltip {
         position: relative;
     }
-
     .tooltip .tooltiptext {
         visibility: hidden;
         width: auto;
@@ -454,8 +462,75 @@
         left: 50%;
         transform: translateX(-50%); /* Center the tooltip horizontally */
     }
-
     .tooltip:hover .tooltiptext {
         visibility: visible;
+    }
+
+    .section_title {
+      display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+      #main_page {
+        margin: 0 5vw 2rem 5vw;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      #main_page {
+        flex-direction: column;
+      }
+
+      #resume h3 {
+        margin-left: 0;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      #contact {
+        margin-bottom: 1rem;
+      }
+
+      #first {
+        position: relative;
+        height: 100%;
+        top: 0;
+        margin-top: 2rem;
+      }
+
+      #about, #skills {
+        margin: 0;
+
+      }
+
+      #second>div {
+        padding-top: 2rem;
+      }
+
+      .project {
+        background: var(--color-bg-1);
+      }
+
+      .project:hover {
+        box-shadow: none;
+      }
+
+      .project h3{
+        color: var(--color-theme-1);
+      }
+
+      #skills h3 {
+        display: none;
+      }
+
+      .section_title {
+        display: flex;
+        color: var(--color-theme-1);
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
     }
 </style>

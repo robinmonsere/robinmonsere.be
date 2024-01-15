@@ -10,15 +10,6 @@
 </div>
 <section id="blogPosts">
     <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
-    <BlogPost></BlogPost>
 </section>
 
 
