@@ -1,18 +1,19 @@
 <script>
-    import starbase from '$lib/images/blog/starbase.jpg'
-    let date;
-    let title;
-    let text;
+    export let date;
+    export let title;
+    export let text;
+    export let img;
+    export let url;
 </script>
 
-<div id="blogPost">
-    <img src="{starbase}" alt="">
+<a id="blogPost" href="/blog/{url}" >
+    <img src="{img}" alt="">
     <div id="information">
         <h2>{title}</h2>
         <p>{text}</p>
         <p id="date">{date}</p>
     </div>
-</div>
+</a>
 
 <style>
 
@@ -35,16 +36,20 @@
 
     img {
         width: 100%;
+        height: 15rem;
         border-radius: 0.4rem 0.4rem 0 0;
+        object-fit: cover;
     }
 
     h2 {
         color: var(--color-theme-1);
         font-weight: bold;
         font-size: 1.5rem;
+        padding-bottom: 0.4rem;
     }
 
     #date {
+        padding-top: 0.5rem;
         color: var(--color-text-2);
     }
 </style>

@@ -17,12 +17,15 @@ import logo from "$lib/images/R logo.png";
 
     #top {
         position: sticky;
-        top: 10px ;
-        margin-top: 2rem;
+        top: 0;
+
+        padding-top: 2rem;
         margin-bottom: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background: var(--color-bg-0);
+
     }
 
     nav {

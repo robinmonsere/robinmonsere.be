@@ -20,7 +20,5 @@
         margin: 0 15vw 5rem 15vw;
         height: 100%;
     }
-    main {
 
-    }
 </style>

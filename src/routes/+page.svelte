@@ -29,7 +29,7 @@
     <div class="column" id="second">
         <div id="about" use:scrollRef={'about'}>
             <p class="section_title">About</p>
-            <p>I'm a 20-year-old <em>software engineering student</em> at Howest. I love building <em>automated systems</em> for the web and industries.
+            <p>I'm a 21-year-old <em>software engineering student</em> at Howest. I love building <em>automated systems</em> for the web and industries.
                 Next to my studies and software, my interest lay with spaceflight and I actively contribute to a youth movement.</p>
             <br><p>In 2023 I went on a international study to the USA, and in 2024 I am doing an internship in mobile app development.</p>
         </div>
@@ -476,7 +476,7 @@
       }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px), print {
       #main_page {
         flex-direction: column;
       }
