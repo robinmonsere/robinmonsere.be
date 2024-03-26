@@ -6,7 +6,7 @@
     export let url;
 </script>
 
-<a id="blogPost" href="/blog/{url}" >
+<a id="blogPost" href="/blog/posts/{url}" >
     <img src="{img}" alt="">
     <div id="information">
         <h2>{title}</h2>

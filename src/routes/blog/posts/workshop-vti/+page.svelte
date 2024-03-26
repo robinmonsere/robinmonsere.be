@@ -4,7 +4,6 @@
     import workshop3 from "../images/workshop3.jpg";
 </script>
 
-<a id="backButton" href="/blog"><i class="fa-solid fa-arrow-left"></i> Go back</a>
 <h1>Workshop @ VTI Izegem</h1>
 
 <p>
@@ -51,17 +50,6 @@
     #person {
         color: var(--color-theme-1);
         text-decoration: underline;
-    }
-
-    #backButton {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        gap: 1rem;
-    }
-    i {
-        font-size: 2rem;
-
     }
 
     h1 {

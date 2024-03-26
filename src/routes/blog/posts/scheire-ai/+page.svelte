@@ -3,9 +3,6 @@
 
 </script>
 
-<a href="/blog"><i class="fa-solid fa-arrow-left"></i> Go back</a>
-
-
 <h1>Lieven Schiere and AI</h1>
 
 <p>When Lieven Scheire announced he was doing a tour about AI, I knew I had to see it.</p>
@@ -41,18 +38,6 @@
 <p>Lieven Scheire's insightful exploration of AI provided a deeper understanding of its evolution, challenges, and transformative potential. As we continue to navigate the frontiers of AI, his guidance serves as a beacon illuminating the path forward. It inspired me to delve deeper into the fascinating world of Artificial Intelligence.</p>
 
 <style>
-
-    a {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        gap: 1rem;
-    }
-    i {
-        font-size: 2rem;
-
-    }
-
     h1 {
 
         color: var(--color-theme-1);
