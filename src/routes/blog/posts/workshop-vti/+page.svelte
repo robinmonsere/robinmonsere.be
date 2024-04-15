@@ -1,7 +1,10 @@
 <script>
-    import workshop1 from "../images/workshop1.jpg";
-    import workshop2 from "../images/workshop2.jpg";
-    import workshop3 from "../images/workshop3.jpg";
+    import workshop1 from '$lib/images/workshop1.jpg';
+    import workshop2 from '$lib/images/workshop2.jpg';
+    import workshop3 from '$lib/images/workshop3.jpg';
+    //import workshop1 from "../images/workshop1.jpg";
+    //import workshop2 from "../images/workshop2.jpg";
+    //import workshop3 from "../images/workshop3.jpg";
 </script>
 
 <h1>Workshop @ VTI Izegem</h1>
