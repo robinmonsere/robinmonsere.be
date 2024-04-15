@@ -15,7 +15,7 @@
 <div id="main_page">
     <div class="column" id="first">
         <div>
-            <h1>Robin Monseré via svelte</h1>
+            <h1>Robin Monseré</h1>
             <h2>Computer Science student</h2>
             <p>Interested in automation, efficient code and spaceflight.</p>
             <Nav></Nav>
