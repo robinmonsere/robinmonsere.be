@@ -17,7 +17,7 @@
 <p>I deployed this site on Combell.</p>
 
 <h2>Source code</h2>
-<p>You can find all the source code for this project on <a href="https://www.github.com/robinmonsere">my github</a>, <a href="https://www.github.com/robinmonsere/robinmonsere.be">here</a></p>
+<p>You can find all the source code for this project on <a href="https://www.github.com/robinmonsere">my github</a>, <a href="https://www.github.com/robinmonsere/robinmonsere.be">here.</a></p>
 
 <style>
     h1 {

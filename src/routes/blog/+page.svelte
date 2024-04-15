@@ -1,12 +1,19 @@
 <script>
     import logo from '$lib/images/R logo.png'
+    import lieven from '$lib/images/LievenAI.png'
+    import starbase from '$lib/images/starbase.jpg'
+    import workshop from '$lib/images/workshop1.jpg'
+    import usa from '$lib/images/usa.jpg';
+    import incaso from '$lib/images/incaso.jpg';
+    import porftolio from '$lib/images/porfolio.png';
+
     import BlogPost from "./BlogPost.svelte";
-    import starbase from './posts/images/starbase.jpg'
-    import workshop from './posts/images/workshop1.jpg'
-    import lieven from './posts/images/LievenAI.png'
-    import usa from './posts/images/usa.jpg';
-    import incaso from './posts/images/incaso.jpg';
-    import porftolio from './posts/images/porfolio.png';
+    //import starbase from './posts/images/starbase.jpg'
+    //import workshop from './posts/images/workshop1.jpg'
+    //import lieven from './posts/images/LievenAI.png'
+    //import usa from './posts/images/usa.jpg';
+    //import incaso from './posts/images/incaso.jpg';
+    //import porftolio from './posts/images/porfolio.png';
     import {goto} from "$app/navigation";
 
     function handleClick(){
