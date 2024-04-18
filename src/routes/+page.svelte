@@ -1,11 +1,12 @@
 <script>
-    import Nav from './Nav.svelte'
+    import Nav from './Nav.svelte';
     import TechBox from "./TechBox.svelte";
     import pilsopoly from '$lib/images/pilsopoly.svg';
     import fitBuddy from '$lib/images/fitbuddy.svg';
-    import spaceGaze from '$lib/images/spacegaze.svg'
-    import eportfolio from '$lib/images/R logo.png'
-    import {scrollRef } from 'svelte-scrolling'
+    import spaceGaze from '$lib/images/spacegaze.svg';
+    import eportfolio from '$lib/images/R logo.png';
+    import progress from '$lib/images/progress.svg';
+    import {scrollRef } from 'svelte-scrolling';
 
     import '$lib/reset.css'
     import './styles.css';
@@ -17,7 +18,7 @@
         <div>
             <h1>Robin Monseré</h1>
             <h2>Computer Science student</h2>
-            <p>Interested in automation, efficient code and spaceflight.</p>
+            <p>Interested in <span class="secondary">automation</span>, <span class="secondary">mobile development</span> and <span class="secondary">spaceflight</span>.</p>
             <Nav></Nav>
         </div>
         <div id="contact" >
@@ -265,6 +266,24 @@
                     <TechBox name="Svelte"/>
                 </div>
             </div>
+            <div class="project">
+                <div class="project_links">
+                    <img src="{progress}" alt="SpaceX Progress Logo">
+                    <div class="source">
+                        <a href="https://github.com/robinmonsere/spaceXprogress" target="_blank"><i class="fa-solid fa-link"></i>Source</a>
+                        <a href="https://spacexprogress.vercel.app/" target="_blank"><i class="fa-solid fa-link"></i>link</a>
+                        <a href="https://twitter.com/SpaceX_Deimos/" target="_blank"><i class="fa-solid fa-link"></i>𝕏 bot</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>SpaceX Progress</h3>
+                    <p>This is a simple Svelte project that tracks and shows the progress towards the goal of 148 Falcon launches in 2024. This also includes a bot that posts the progress on 𝕏.</p>
+                    <br>
+                    <p>The site is build with Svelte and hosted on Vercel.</p>
+                    <TechBox name="Svelte"/>
+                    <TechBox name="Vercel kv"/>
+                </div>
+            </div>
             <a id="resume" href="https://robinmonsere.be/resume.pdf" target="_blank"><h3>View full résumé <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a>
         </div>
     </div>
@@ -470,6 +489,10 @@
       display: none;
     }
 
+    .secondary {
+      color: var(--color-theme-1);
+    }
+
     @media screen and (max-width: 1000px) {
       #main_page {
         margin: 0 5vw 2rem 5vw;
@@ -520,6 +543,7 @@
       .project h3{
         color: var(--color-theme-1);
       }
+
 
       #skills h3 {
         display: none;
