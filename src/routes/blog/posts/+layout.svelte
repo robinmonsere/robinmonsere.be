@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <a id="backButton" href="/blog"><i class="fa-solid fa-arrow-left"></i> Go back</a>
 <slot />
 
@@ -13,6 +17,4 @@
     i {
         font-size: 2rem;
     }
-
-
 </style>

@@ -16,13 +16,17 @@
 </a>
 
 <style>
-
     #blogPost {
         border-radius: 0.4rem;
         border: 2px white solid;
         width: 48%;
         background: var(--color-bg-1);
         transition: 0.5s;
+    }
+    @media screen and (max-width: 1000px) {
+        #blogPost {
+            width: 100%;
+        }
     }
 
     #blogPost:hover {

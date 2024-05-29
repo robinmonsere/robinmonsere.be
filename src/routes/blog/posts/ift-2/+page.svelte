@@ -50,26 +50,13 @@
     <img src="{ift7}" alt="">
     <img src="{ift9}" alt="">
     <img src="{ift5}" alt="">
-
     <img src="{ift8}" alt="">
 
 </div>
+
 <style>
-    #images {
-        padding-top: 5rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5rem;
-    }
-    img {
-        max-width: 100%;
-        max-height: 30rem;
-        margin-bottom: 1rem;
-        object-fit: contain;
-    }
 
     h1 {
-
         color: var(--color-theme-1);
         font-size: 2.5rem;
         padding-bottom: 1rem;
@@ -85,7 +72,29 @@
         line-height: 1.5rem;
     }
 
-    a {
-        text-decoration: underline;
+
+
+    #images {
+        padding-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    #images img {
+        max-width: 100%;
+        max-height: 30rem;
+        margin-bottom: 1rem;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 500px) {
+        #images {
+            flex-direction: column;
+            gap: 0;
+        }
+        #images img {
+            max-height: none;
+        }
     }
 </style>

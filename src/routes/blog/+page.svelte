@@ -1,5 +1,4 @@
 <script>
-    import logo from '$lib/images/R logo.png'
     import lieven from '$lib/images/LievenAI.png'
     import starbase from '$lib/images/starbase.jpg'
     import workshop from '$lib/images/workshop1.jpg'
@@ -7,21 +6,8 @@
     import incaso from '$lib/images/incaso.jpg';
     import porftolio from '$lib/images/porfolio.png';
     import flutter from '$lib/images/flutter.png';
-
     import BlogPost from "./BlogPost.svelte";
-    //import starbase from './posts/images/starbase.jpg'
-    //import workshop from './posts/images/workshop1.jpg'
-    //import lieven from './posts/images/LievenAI.png'
-    //import usa from './posts/images/usa.jpg';
-    //import incaso from './posts/images/incaso.jpg';
-    //import porftolio from './posts/images/porfolio.png';
-    import {goto} from "$app/navigation";
-
-    function handleClick(){
-        console.log("test")
-    }
 </script>
-
 
 <div>
     <h1>Robin Monseré's <span>blog</span></h1>
@@ -55,5 +41,13 @@
 
     h1 span {
         color: var(--color-theme-1);
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        #blogPosts {
+            width: 100%;
+            flex-direction: column;
+        }
     }
 </style>

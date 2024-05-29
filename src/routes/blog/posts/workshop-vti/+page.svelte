@@ -71,4 +71,15 @@
         color: var(--color-text-1);
         line-height: 1.5rem;
     }
+
+    @media screen and (max-width: 500px) {
+        #images {
+            flex-direction: column;
+            gap: 0;
+        }
+        #images img {
+            max-height: none;
+            width: 100%;
+        }
+    }
 </style>

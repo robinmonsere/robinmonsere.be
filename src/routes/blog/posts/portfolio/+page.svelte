@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <h1>The creation of <a href="https://www.robinmonsere.be">robinmonsere.be</a></h1>
 
 
@@ -20,8 +23,11 @@
 <p>You can find all the source code for this project on <a href="https://www.github.com/robinmonsere">my github</a>, <a href="https://www.github.com/robinmonsere/robinmonsere.be">here.</a></p>
 
 <style>
-    h1 {
+    a {
+        text-decoration: underline;
+    }
 
+    h1 {
         color: var(--color-theme-1);
         font-size: 2.5rem;
         padding-bottom: 1rem;
@@ -37,7 +43,29 @@
         line-height: 1.5rem;
     }
 
-    a {
-        text-decoration: underline;
+
+
+    #images {
+        padding-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    #images img {
+        max-width: 100%;
+        max-height: 30rem;
+        margin-bottom: 1rem;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 500px) {
+        #images {
+            flex-direction: column;
+            gap: 0;
+        }
+        #images img {
+            max-height: none;
+        }
     }
 </style>

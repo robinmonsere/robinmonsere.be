@@ -18,7 +18,6 @@ import logo from "$lib/images/R logo.png";
     #top {
         position: sticky;
         top: 0;
-
         padding-top: 2rem;
         margin-bottom: 1rem;
         display: flex;
