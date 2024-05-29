@@ -32,6 +32,7 @@
     <BlogPost url="scheire-ai" title="Lieven Scheire AI" img="{lieven}" text="Lieven Scheire talks about AI" date="02/02/2024"></BlogPost>
     <BlogPost url="incaso" title="Incaso 2023" img="{incaso}" text="International project in Rijeka, Croatia" date="12/02/23 - 19/02/23"></BlogPost>
     <BlogPost url="portfolio" title="Portfolio" img="{porftolio}" text="Learn how I created this portfolio and blog!" date="22/02/2024"></BlogPost>
+    <BlogPost url="flutter-meetup" title="The Flutter Belgium Meetup" text="An event organised by Flutter Belgium" date="15/05/2024"></BlogPost>
 </section>
 
 
