@@ -36,7 +36,7 @@
 
 <div>
     <div class="button diagonal-tl-br-out">
-        <a href="https://github.com/robinmonsere">Take a look at my Github</a>
+        <a href="https://github.com/robinmonsere">View my Github</a>
     </div>
     <nav>
         <a use:scrollTo={{ ref:'about', duration: 1000}} id="nav-about" aria-current={$page.url.hash === '#about' || $page.url.hash === ''} href="/#about"><span class="nav_indicator"></span><span>About</span></a>
