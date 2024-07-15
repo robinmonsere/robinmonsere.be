@@ -32,8 +32,8 @@
             <p class="section_title">About</p>
             <p>I'm a 21-year-old <em>software engineering student</em> at Howest. I love building <em>automated systems</em> for the web and industries.
                 Next to my studies and software, my interest lay with spaceflight and I actively contribute to a youth movement.</p>
-            <br><p>In 2023 I went on a international study to the USA, and in 2024 I am doing an internship in mobile app development.</p>
-        </div>
+                <br><p>In 2023 I did an international study in the USA, at the University of Tyler in Texas.</p>
+            </div>
         <div id="skills" use:scrollRef={'skills'}>
             <p class="section_title">Skills</p>
             <h3>Things I've worked with so far:</h3>
