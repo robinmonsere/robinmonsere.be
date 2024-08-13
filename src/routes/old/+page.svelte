@@ -284,7 +284,7 @@
                     <TechBox name="Vercel kv"/>
                 </div>
             </div>
-            <a id="resume" href="https://robinmonsere.be/resume.pdf" target="_blank"><h3>View full résumé <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a>
+            <a id="resume" href="https://robinmonsere.be/resume" target="_blank"><h3>View full résumé <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a>
         </div>
     </div>
 </div>
